@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Simple Canvas Game</title>
+	</head>
+	<body>
+		<script src="game.js"></script><br><br>
+		Select speed: 
+		<select id = "select" onchange = "change_speed();">
+          <option name = "Slow" value = "100">Slow</option>  
+          <option name = "Medium" value = "200">Medium</option> 
+          <option name = "Fast" value = "300">Fast</option>
+          </select> 
+          
+          <input id = "check" type = "checkbox">&nbsp Customise speed
+	</body>
+	<script type="text/javascript">
+
+		function change_speed() {
+
+			var take = document.getElementById('select');
+			var capture = take.options[take.selectedIndex].value;
+			hero.speed = capture;
+		
+			document.getElementById('check').onclick = function(){
+
+				if (this.checked){
+
+						var text = document.createElement('input');
+						document.body.appendChild(text);
+
+				}
+			}
+			}
+		
+
+	</script>
+</html>
